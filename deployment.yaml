@@ -19,6 +19,6 @@ spec:
       - name: regcred
       containers:
       - name: tvndemo
-        image: boroskamil/demoapp/tvndemo:latest
+        image: boroskamil/tvndemo:latest
         ports:
         - containerPort: 8080

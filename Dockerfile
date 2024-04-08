@@ -1,10 +1,6 @@
 # Use Tomcat as the base image
 FROM tomcat:8.5-jdk8
 
-# Set environment variables for Java and Maven
-#ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
-#ENV MAVEN_HOME /usr/share/maven
-
 # Install OpenJDK 8
 RUN apt-get update && \
     apt-get install -y openjdk-8-jdk maven&& \
