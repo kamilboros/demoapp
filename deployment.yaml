@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tvndemo
+  namespace: tvndemo
+  labels:
+    app: tvndemo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tvndemo
+  template:
+    metadata:
+      labels:
+        app: tvndemo
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: tvndemo
+        image: boroskamil/demoapp/tvndemo:latest
+        ports:
+        - containerPort: 8080
